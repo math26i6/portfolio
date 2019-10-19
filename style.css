@@ -15,6 +15,16 @@ a {
 
 }
 
+.separator #sep2 {
+    top: 0;
+    transform: rotateX(180deg);
+}
+
+#shuffle {
+    width: 90vw;
+    height: 50;
+}
+
 /* -------------------------------------------------------------------------
    end Separator
  * ------------------------------------------------------------------------- */
@@ -45,15 +55,18 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 100vh;
     position: relative;
     background: #e8e8e8;
     text-align: center;
     padding: 0 2em;
 }
 
+#about {}
+
 .et-slide p {
-    width: 150vh;
+
+
     z-index: 1;
 }
 
@@ -194,6 +207,14 @@ a {
 }
 
 @media (max-width: 1024px) {
+
+    #about {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+
+    }
 
 
     .container {
