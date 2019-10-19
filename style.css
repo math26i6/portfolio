@@ -1,0 +1,223 @@
+body {
+    font-family: "Century Gothic", 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.separator {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+}
+
+/* -------------------------------------------------------------------------
+   end Separator
+ * ------------------------------------------------------------------------- */
+
+/* begin Media Max-Width 767
+============================================================================ */
+
+@media screen and (max-width: 767px) {
+    .section-one {
+        padding: 130px 0 190px;
+    }
+
+    .separator {
+        bottom: -110px;
+
+        .separator__svg {
+            left: -20%;
+            position: relative;
+            transform: rotate(15deg);
+            width: 140%;
+        }
+    }
+}
+
+
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    position: relative;
+    background: #e8e8e8;
+    text-align: center;
+    padding: 0 2em;
+}
+
+.et-slide p {
+    width: 150vh;
+    z-index: 1;
+}
+
+.et-hero-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #e8e8e8;
+    text-align: center;
+    padding: 0 2em;
+}
+
+.et-hero-tabs h1,
+.et-slide h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+
+.et-hero-tabs h3,
+.et-slide h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+
+.nav--top {
+    position: fixed;
+    top: 0;
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+}
+
+.et-hero-tab:hover {
+    color: white;
+    background: rgba(102, 177, 241, 0.8);
+    transition: all 0.5s ease;
+}
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+}
+
+.container {
+    display: none;
+    z-index: 2;
+
+}
+
+.menu {
+    display: block !important;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#splash {
+    background-image: url(img/Baggrund.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo {
+    background-image: url(img/Logo.png);
+    width: 20%;
+    height: 50%;
+    align-content: center;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width: 800px) {
+
+
+    .et-hero-tabs h1,
+    .et-slide h1 {
+        font-size: 3rem;
+    }
+
+    .et-hero-tabs h3,
+    .et-slide h3 {
+        font-size: 1rem;
+    }
+
+    .et-hero-tab {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    .container {
+        display: block !important;
+        cursor: pointer;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    .et-hero-tab {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        height: 400px;
+        z-index: 1;
+        transition: all 1s ease;
+    }
+
+
+}
