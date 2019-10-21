@@ -15,6 +15,24 @@
     text-align: center;
 }
 
+button {
+    background-color: white;
+    border: 1px solid black;
+    width: 10vw;
+    height: 5vw;
+    border-radius: 5px;
+    margin: 10px
+}
+
+button:active {
+    background-color: grey;
+}
+
+button:hover {
+    background-color: gray;
+    transition: .4s ease;
+}
+
 .my-shuffle-container {
     margin: 0 auto;
 }
@@ -71,11 +89,20 @@ p {
 }
 
 
-.webdesign:hover img {
+.hover:hover img {
     opacity: 0.5 !important;
 }
 
-.webdesign:hover p {
+.hover:hover p {
+    opacity: 1 !important;
+}
+
+
+.video:hover img {
+    opacity: 0.5 !important;
+}
+
+.video:hover p {
     opacity: 1 !important;
 }
 
