@@ -1,5 +1,8 @@
 body {
     font-family: "Century Gothic", 'Lato', sans-serif;
+    background-image: url(img/space.jpg);
+    background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -25,6 +28,51 @@ a {
     height: 50%;
 }
 
+#info {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 80px;
+    color: white;
+    animation: arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+#arrow a {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: white;
+    animation: arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+
+    }
+}
+
 /* -------------------------------------------------------------------------
    end Separator
  * ------------------------------------------------------------------------- */
@@ -32,42 +80,153 @@ a {
 /* begin Media Max-Width 767
 ============================================================================ */
 
-@media screen and (max-width: 767px) {
-    .section-one {
-        padding: 130px 0 190px;
+
+#kompetencer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#kom_tekst {
+    grid-row: 2;
+}
+
+#kom_bar {
+    grid-row: 2;
+}
+
+
+.progressbar {
+    display: block;
+    width: 90;
+    background-color: rgba(33, 150, 243, 0.51);
+    border: 1px solid (0, 0, 0, 0.3);
+    margin: 10px;
+    height: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #2196F3;
+
+
+}
+
+.skills {
+    text-align: right;
+    color: white;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+@keyframes ps {
+    0% {
+        width: 0%;
     }
 
-    .separator {
-        bottom: -110px;
-
-        .separator__svg {
-            left: -20%;
-            position: relative;
-            transform: rotate(15deg);
-            width: 140%;
-        }
+    100% {
+        width: 90%;
     }
 }
 
+@keyframes pr {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes ae {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes ai {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+.Ps {
+    animation: ps 2s;
+    width: 90%;
+    background-color: #2196F3;
+}
+
+.Pr {
+    animation: pr 2s;
+    width: 80%;
+    background-color: #2196F3;
+}
+
+.Ae {
+    animation: ae 2s;
+    width: 65%;
+    background-color: #2196F3;
+}
+
+.Ai {
+    animation: ai 2s;
+    width: 60%;
+    background-color: #2196F3;
+}
+
+button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 2px solid #66B1F1;
+    box-shadow: 0 0 10px #2196F3;
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+    margin: 10px
+}
+
+button:active {
+    background-color: grey;
+
+
+}
+
+button:hover {
+    background-color: gray;
+    transition: .4s ease;
+    border: none;
+    color: white;
+}
 
 .et-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     position: relative;
-    background: #e8e8e8;
     text-align: center;
     padding: 0 2em;
+}
+
+#portfolio {
+    height: 60vw;
 }
 
 #about {}
 
 .et-slide p {
-
-
-    z-index: 1;
+    color: white;
+    text-align: left;
+    line-height: 20px;
 }
 
 .et-hero-tabs {
@@ -84,6 +243,7 @@ a {
 
 .et-hero-tabs h1,
 .et-slide h1 {
+    color: white;
     font-size: 2rem;
     margin: 0;
     letter-spacing: 1rem;
@@ -91,6 +251,7 @@ a {
 
 .et-hero-tabs h3,
 .et-slide h3 {
+    color: white;
     font-size: 1rem;
     letter-spacing: 0.3rem;
     opacity: 0.6;
@@ -118,11 +279,13 @@ a {
     justify-content: center;
     align-items: center;
     flex: 1;
-    color: #000000;
+    color: #ffffff;
+    background-color: black;
     letter-spacing: 0.1rem;
     transition: all 0.5s ease;
     font-size: 0.8rem;
 }
+
 
 .et-hero-tab:hover {
     color: white;
@@ -145,6 +308,11 @@ a {
 
 }
 
+.portfolio iframe {
+    width: 100vw;
+    height: 200vw;
+}
+
 .menu {
     display: block !important;
 }
@@ -152,11 +320,12 @@ a {
 .bar1,
 .bar2,
 .bar3 {
-    width: 35px;
+    width: 55px;
     height: 5px;
-    background-color: #333;
-    margin: 6px 0;
+    background-color: #ffffff;
+    margin: 8px 0;
     transition: 0.4s;
+
 }
 
 .change .bar1 {
@@ -170,19 +339,20 @@ a {
 
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-9px, -9px);
 }
 
 #splash {
-    background-image: url(img/Baggrund.jpg);
+    background-image: url(img/space.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #logo {
     background-image: url(img/Logo.png);
     width: 20%;
-    height: 50%;
+    height: 40%;
     align-content: center;
     background-repeat: no-repeat;
 }
@@ -208,12 +378,26 @@ a {
 
 @media (max-width: 1024px) {
 
+    #logo {
+        background-image: url(img/Logo.png);
+        width: 30%;
+        height: 20%;
+        align-content: center;
+        background-repeat: no-repeat;
+    }
+
     #about {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         text-align: center;
 
+    }
+
+    .et-slide p {
+        font-size: 2rem;
+        font-family: montserrat;
+        text-align: left;
     }
 
 
@@ -223,21 +407,65 @@ a {
         position: fixed;
         top: 30px;
         right: 20px;
-        z-index: 2;
+        z-index: 4;
     }
 
     .et-hero-tab {
         font-size: 2rem;
-        padding: 20px;
+        padding: 100px;
+        animation: points 2.5s;
     }
 
     .nav {
         display: none;
         position: fixed;
         top: 0;
-        height: 400px;
-        z-index: 1;
+        height: 700px;
+        z-index: 3;
+        animation: nav 1s;
         transition: all 1s ease;
+    }
+
+    .et-slide {
+        height: 60vh;
+    }
+
+    #arrow a {
+        width: 50px;
+        height: 50px;
+        font-size: 100px;
+        color: white;
+        animation: arrow;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
+
+
+
+    @keyframes points {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes nav {
+        0% {
+            height: 0px;
+        }
+
+        100% {
+            height: 700px;
+        }
+    }
+
+    .et-hero-tab-slider {
+        width: 100% !important;
     }
 
 

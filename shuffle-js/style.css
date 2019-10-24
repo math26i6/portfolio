@@ -1,9 +1,14 @@
 /* Bootstrap-style columns */
+
+body {
+    background-image: url(img/space.jpg);
+}
+
 .column {
     position: relative;
     float: left;
     min-height: 1px;
-    width: 25%;
+    width: 30%;
     padding-left: 4px;
     padding-right: 4px;
 
@@ -13,28 +18,44 @@
 
 .buttons {
     text-align: center;
+    font-family: montserrat;
+}
+
+@media (max-width: 1024px) {
+    button {
+        height: 50px !important;
+        width: 130px !important;
+    }
 }
 
 button {
-    background-color: white;
-    border: 1px solid black;
-    width: 10vw;
-    height: 5vw;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 2px solid #66B1F1;
+    box-shadow: 0 0 10px #2196F3;
+    width: 250px;
+    height: 60px;
     border-radius: 5px;
     margin: 10px
 }
 
 button:active {
     background-color: grey;
+
+
 }
 
 button:hover {
     background-color: gray;
     transition: .4s ease;
+    border: none;
+    color: white;
 }
 
 .my-shuffle-container {
     margin: 0 auto;
+    min-height: 150px !important;
 }
 
 .row {
@@ -61,6 +82,12 @@ p {
 
 .my-sizer-element {
     width: 8.33333%;
+}
+
+@media screen (max-width:1000px) {
+    .my-sizer-element {
+        min-width: 200px;
+    }
 }
 
 /* default styles so shuffle doesn't have to set them (it will if they're missing) */
