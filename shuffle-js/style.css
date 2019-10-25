@@ -70,16 +70,23 @@ button:hover {
 .row {
     display: flex;
     width: 80%;
-    flex-wrap: wrap;
+    /*    left: 27%;*/
 }
 
 p {
     z-index: 2;
     opacity: 0;
-    font-size: 1.5rem;
+    top: 3vw;
+    left: 6.5vw;
+    font-size: 1.9vw;
+    margin: 10px;
     text-align: left;
     position: absolute;
     transition: 1s ease;
+}
+
+p:hover {
+    text-decoration: underline;
 }
 
 
@@ -89,14 +96,21 @@ p {
 
 .my-sizer-element {
     width: 8.33333%;
-    /*    min-width: 200px !important;*/
 }
 
-@media screen (max-width:1000px) {
+@media (max-width: 1000px) {
     .my-sizer-element {
-        /*        width: 8%;*/
-        min-width: 200px !important;
+        min-width: 350px !important;
     }
+
+    .row {
+        /*
+    display: flex;
+    width: 80%;
+*/
+        left: 27%;
+    }
+
 }
 
 /* default styles so shuffle doesn't have to set them (it will if they're missing) */
@@ -126,7 +140,8 @@ p {
 
 
 .hover:hover img {
-    opacity: 0.5 !important;
+    background-color: white;
+    opacity: 0.2 !important;
 }
 
 .hover:hover p {
@@ -135,7 +150,8 @@ p {
 
 
 .video:hover img {
-    opacity: 0.5 !important;
+    background-color: white;
+    opacity: 0.2 !important;
 }
 
 .video:hover p {
