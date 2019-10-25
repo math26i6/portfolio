@@ -1,7 +1,16 @@
 /* Bootstrap-style columns */
 
 body {
-    background-image: url(img/space.jpg);
+    background-color: rgba(0, 0, 255, 0);
+}
+
+a {
+    position: relative;
+
+}
+
+a p {
+    color: white;
 }
 
 .column {
@@ -65,12 +74,10 @@ button:hover {
 }
 
 p {
-    top: 45%;
     z-index: 2;
-    left: 30%;
     opacity: 0;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     position: absolute;
     transition: 1s ease;
 }
@@ -82,11 +89,13 @@ p {
 
 .my-sizer-element {
     width: 8.33333%;
+    /*    min-width: 200px !important;*/
 }
 
 @media screen (max-width:1000px) {
     .my-sizer-element {
-        min-width: 200px;
+        /*        width: 8%;*/
+        min-width: 200px !important;
     }
 }
 
@@ -131,6 +140,10 @@ p {
 
 .video:hover p {
     opacity: 1 !important;
+}
+
+a:hover {
+    color: red;
 }
 
 
